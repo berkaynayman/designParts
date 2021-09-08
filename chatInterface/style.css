@@ -3,6 +3,7 @@
     margin: 0;
     border: none;
     text-decoration: none;
+    list-style: none;
 }
 *:focus{
     outline: none;
@@ -27,8 +28,8 @@ html,body {
 }
 
 .chat .sidebar .search{
-    height: 40px;
-    min-height: 40px;
+    height: 50px;
+    min-height: 50px;
     border-bottom: 1px solid #ddd;
     position: relative;
     padding: 0 10px;
@@ -50,7 +51,7 @@ html,body {
     top: 0;
     right: 0;
     width: 40px;
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -110,3 +111,86 @@ html,body {
     flex: 1; /*sidebardan kalan width ne ise orayı doldurur*/
     border-left: 1px solid #ddd;
 }
+
+.chat .content .message-header {
+    height: 50px;
+    min-height: 50px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 15px;
+}
+
+.chat .content .message-header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.chat .content .message-header .user-info img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat .content .message-header .user-info .user .name{
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+}
+
+.chat .content .message-header .user-info .user .time{
+    font-size: 13px;
+    color: #999;
+}
+
+.chat .content .message-header .actions ul{
+    display: flex;
+}
+
+/* bunu kullanmamız UI/UX kısmında sorun olabilir 
+    çünkü iconun yanına tıklandığı zamanda react almalı kullanıcı
+.chat .content .message-header .actions ul li{
+    margin-left: 10px;
+}
+*/
+
+.chat .content .message-header .actions ul li a{
+    font-size: 20px;
+    color: #999;
+    display: block;
+    width: 30px;
+    text-align: center;
+
+}
+
+.chat .content .message-header .actions ul li a:hover{
+    color: #222;
+}
+
+.chat .content .message-form{
+    border-top: 1px solid #ddd;
+    background: #eee;
+}
+
+.chat .content .message-form ul{
+    display: flex;
+}
+
+.chat .content .message-form ul li.input{
+    flex: 1;
+}
+
+.chat .content .message-form ul li.input input{
+    width: 100%;
+    box-sizing: border-box;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 36px;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+
+
