@@ -110,6 +110,8 @@ html,body {
 .chat .content{
     flex: 1; /*sidebardan kalan width ne ise orayı doldurur*/
     border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat .content .message-header {
@@ -169,13 +171,43 @@ html,body {
     color: #222;
 }
 
+.chat .content .message-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.chat .content .message-content .message{
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.chat .content .message-content .message .bubble{
+    padding: 6px 12px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.chat .content .message-content .message .time{
+    font-size: 12px;
+    color: #999;
+}
+
 .chat .content .message-form{
     border-top: 1px solid #ddd;
     background: #eee;
+    padding: 10px;
 }
 
 .chat .content .message-form ul{
     display: flex;
+}
+
+.chat .content .message-form ul li{
+    margin: 0 5px;
 }
 
 .chat .content .message-form ul li.input{
@@ -192,5 +224,25 @@ html,body {
     padding: 0 15px;
 }
 
+.chat .content .message-form ul li a{
+    width: 36px;
+    height: 36px;
+    display: block;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+}
 
+.chat .content .message-form ul li.emoji-btn a{
+    background: #339af0;
+}
 
+.chat .content .message-form ul li.sound-btn a{
+    background: #ff5722;
+}
+
+.chat .content .message-form ul li.image-btn a{
+    background: #4caf50;
+}
