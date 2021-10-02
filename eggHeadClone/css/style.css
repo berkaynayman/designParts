@@ -16,6 +16,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -25,6 +26,8 @@ body {
 	line-height: 1;
 	font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	-webkit-font-smoothing:antialiased;
+	background: #F4F7F9;
 }
 ol, ul {
 	list-style: none;
@@ -57,6 +60,18 @@ img {
 .container{
     width: 1300px;
     margin: 0 auto;
+}
+
+.btn{
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	color: #fff;
+	border-radius: 5px;
+	background: #316aff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 /*
@@ -150,4 +165,39 @@ img {
 .banner{
 	min-height: 50vh;
 	background: linear-gradient(170deg, #212A39, #181E28);
+}
+
+.banner .container{
+	min-height: 50vh;
+	display: flex;
+	padding: 50px 0;
+	align-items: center;
+}
+
+.banner .container .banner-box{
+	width: 50%;
+}
+
+.banner .container .banner-box img{
+	max-width: 100%;
+}
+
+.banner .container .banner-box.banner-image{
+	padding-left: 150px;
+}
+
+.banner .container .banner-box h1{
+	font-size: 48px;
+	color: #fff;
+	line-height: 56px;
+}
+
+.banner .container .banner-box h2{
+	font-size: 24px;
+	color: #B0B6BE;
+	margin-top: 10px;
+}
+
+.banner .container .banner-box .btn{
+	margin-top: 65px;
 }
