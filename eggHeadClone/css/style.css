@@ -72,6 +72,11 @@ img {
 	background: #316aff;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	transition: 200ms all;
+}
+
+.btn:hover{
+	transform: scale(1.04);
 }
 
 /*
@@ -201,3 +206,66 @@ img {
 .banner .container .banner-box .btn{
 	margin-top: 65px;
 }
+
+/*
+	SECTION 1
+*/
+
+.lang-what-agghead{
+	display: flex;
+	align-items: center;
+	padding: 120px 0;
+}
+
+.lang-what-agghead .lang{
+	display: flex ;
+	width: 392px;
+	min-width: 392px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.lang-what-agghead .lang a{
+	width: 184px;
+	height: 184px;
+	border-radius: 4px;
+	background: #fff;
+	margin-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+	transition: 200ms all;
+}
+
+.lang-what-agghead .lang a:hover{
+	transform: scale(1.05);
+}
+
+.lang-what-agghead .lang a img{
+	height: 40px;
+	margin-bottom: 20px;
+}
+
+.lang-what-agghead .lang a .title{
+	font-size: 18px;
+	color: #111;
+}
+
+.lang-what-agghead .inner{
+	padding-left: 160px;
+}
+
+.lang-what-agghead .inner h3{
+	font-size: 36px;
+	color:#111;
+	margin-bottom: 30px;
+}
+
+.lang-what-agghead .inner p{
+	font-size: 18px;
+	line-height: 28px;
+	margin-bottom: 20px;
+}
+
