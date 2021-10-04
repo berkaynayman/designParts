@@ -74,6 +74,9 @@ img {
 	letter-spacing: 1px;
 	transition: 200ms all;
 }
+.btn.color-green{
+	background: green;
+}
 
 .btn:hover{
 	transform: scale(1.04);
@@ -85,6 +88,9 @@ img {
 
 .header{
     background: #141618;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 }
 
 .header .container{
@@ -214,7 +220,7 @@ img {
 .lang-what-agghead{
 	display: flex;
 	align-items: center;
-	padding: 120px 0;
+	padding: 120px 0 96px;
 }
 
 .lang-what-agghead .lang{
@@ -269,3 +275,84 @@ img {
 	margin-bottom: 20px;
 }
 
+/*
+	SECTION-CONTENT
+*/
+
+.section-content{
+	background: #fff;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+	padding: 64px 96px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.section-content .icon{
+	background: #f4f4f4;
+	width: 56px;
+	height: 56px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.section-content p{
+	font-size: 22px;
+	line-height: 36px;
+	margin-bottom: 10px;
+	text-align: center;
+	max-width: 60%;
+}
+
+.section-content .user{
+	display: flex;
+	align-items: center;
+}
+
+.section-content .user img{
+	width: 40px;
+	height: 40px;
+	border: 2px solid #f4f4f4;
+	border-radius: 50%;
+	margin-right: 8px;
+}
+
+/*
+	SECTION-LEARN
+*/
+
+.section-learn{
+	display: flex;
+}
+
+.section-learn > div {
+	width: 50%;
+	min-width: 50%;
+}
+
+.section-learn .text h3{
+	font-size: 36px;
+	margin-bottom: 30px;
+}
+
+.section-learn .text p{
+	font-size: 18px;
+	line-height: 28px;
+	color: #111;
+}
+
+.section-learn .text .btn{
+	margin-top: 50px;
+}
+
+.section-learn .image img{
+	width: 100%;
+	display: block;
+	margin-top: 100px;
+}
