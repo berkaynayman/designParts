@@ -9,6 +9,7 @@
     text-decoration: none;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
+    user-select: none;
 }
 *:focus{
     outline: none;
@@ -36,12 +37,12 @@ body{
     margin-bottom: 55px;
 }
 .component--prices .title h3{
-    font-style: 42px;
+    font-size: 42px;
     font-weight: 900;
 }
 
 .component--prices .title label{
-    width: 212px;
+    width: 210px;
     height: 50px;
     background-color: #D4D9E0;
     border-radius: 50px;
@@ -50,6 +51,7 @@ body{
     justify-content: center;
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 .component--prices .title label::before{
     content: '';
@@ -60,25 +62,30 @@ body{
     position: absolute;
     top: 5px;
     left: 5px;
-    box-shadow: 0 15px 13px -17px;
     z-index: -1;
+    transition: 400ms left ease-in-out;
 }
 .component--prices .title label span{
     font-size:16px;
     font-weight: bold;
     color: #171922;
-    opacity: .7;
     width: 100px;
     height: 40px;
     display: grid;
     place-items: center;
+    opacity: .7;
+    transition: 400ms opacity ease-in-out;
 }
-
+.component--prices .title label span:first-child{
+    opacity: 1;
+}
 .component--prices .packages{
     display: flex;
     margin: 0 -20px;
 }
 .component--prices .packages .package{
+    display: flex;
+    flex-direction: column;
     flex: 1;
     margin: 0 20px;
     background: #fff;
@@ -86,6 +93,7 @@ body{
     color:#171922;
     font-weight: bold;
     transition: 400ms box-shadow ease-in-out;
+    border-radius: 5px;
 }
 .component--prices .packages .package:hover{
     box-shadow: 0 19px 50px -20px;
@@ -120,6 +128,7 @@ body{
     height: 60px;
     display: grid;
     width: 100%;
+    margin-top: auto;
     place-items:center;
     border: 1px solid #171922;
     border-radius: 5px;
@@ -127,5 +136,30 @@ body{
     font-weight: 600;
     color: #171922;
     transition: 400ms ease-in-out;
+}
 
+/*plan changes style - START*/
+.component--prices .packages .package .price-info .price span::before{
+    content: attr(data-monthly-price);
+}
+.component--prices .packages .package .price-info .description span::before{
+    content: attr(data-monthly-text);
+}
+#price-switch{
+    display: none;
+}
+#price-switch:checked + .title label::before{
+    left: 105px;
+}
+#price-switch:checked + .title label span:first-child{
+    opacity: .71;
+}
+#price-switch:checked + .title label span:last-child{
+    opacity: 1;
+}
+#price-switch:checked + .title + .packages .price-info .price span::before{
+    content: attr(data-yearly-price);
+}
+#price-switch:checked + .title + .packages .package .price-info .description span::before{
+    content: attr(data-yearly-text);
 }

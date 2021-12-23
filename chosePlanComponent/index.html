@@ -9,9 +9,10 @@
 </head>
 <body>
     <div class="component--prices">
+        <input type="checkbox" id="price-switch">
         <div class="title">
             <h3>Choose your plan</h3>
-            <label>
+            <label for="price-switch">
                 <span>Monthly</span>
                 <span>Yearly</span>
             </label>
@@ -21,10 +22,10 @@
                 <h6>Starter</h6>
                 <div class="price-info">
                     <div class="price">
-                        $8.99 / month
+                        <span data-monthly-price="$8.99" data-yearly-price="$5.99"></span> / month
                     </div>
                     <div class="description">
-                        Billed yearly
+                        Billed <span data-monthly-text="monthly" data-yearly-text="yearly"></span>
                     </div>
                 </div>
                 <p>
@@ -39,15 +40,15 @@
                 <h6>Profossional</h6>
                 <div class="price-info">
                     <div class="price">
-                        $8.99 / month
+                        <span data-monthly-price="$21.99" data-yearly-price="$16.99"></span> / month
                     </div>
                     <div class="description">
-                        Billed yearly
+                        Billed <span data-monthly-text="monthly" data-yearly-text="yearly"></span>
                     </div>
                 </div>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe cumque doloremque dolorem, quod odit eaque labore velit corrupti possimus fugiat!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe cumque doloremque dolorem, quod odit eaque labore velit corrupti possimus fugiat!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 </p>
                 <a href="" class="button">
                     Get Started
